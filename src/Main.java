@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         ArraySort sorter = new ArraySort();
 
@@ -19,6 +20,7 @@ public class Main {
         System.out.println("1. Bubble Sort");
         System.out.println("2. Selection Sort");
         System.out.println("3. Insertion Sort");
+        System.out.println("4. Quick Sort");
         int choice = scanner.nextInt();
 
         switch (choice) {
@@ -33,6 +35,10 @@ public class Main {
             case 3:
                 array = sorter.insertionSort(array);
                 System.out.println("insertion sorted: " + Arrays.toString(array));
+                break;
+            case 4:
+                array = sorter.quickSort(array, 0, array.length - 1);
+                System.out.println("quick sorted: " + Arrays.toString(array));
                 break;
             default:
                 System.out.println("Invalid choice");

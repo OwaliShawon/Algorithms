@@ -1,4 +1,5 @@
 public class ArraySort {
+    QuickSort quickSort = new QuickSort();
 
     public int[] bubbleSort(int[] arr) {
         int n = arr.length;
@@ -41,6 +42,11 @@ public class ArraySort {
             }
             arr[j + 1] = key;
         }
+        return arr;
+    }
+
+    public int[] quickSort(int[] arr, int left, int right) {
+        quickSort.quickSort(arr, left, right);
         return arr;
     }
 }
